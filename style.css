@@ -1,0 +1,345 @@
+:root{
+  --bg:#f4f7f5;
+  --card:#ffffff;
+  --text:#223027;
+  --muted:#607166;
+  --green:#2f7d5a;
+  --soft:#e6ece8;
+  --shadow:0 6px 18px rgba(0,0,0,0.06);
+  --radius:18px;
+}
+
+*{box-sizing:border-box;font-family:system-ui,Arial;}
+
+body{margin:0;background:var(--bg);color:var(--text);}
+.wrap{max-width:980px;margin:auto;padding:16px;}
+.card{background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:16px;margin-bottom:16px;}
+
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;}
+
+.btn{
+padding:10px 16px;
+border-radius:30px;
+font-weight:900;
+border:none;
+cursor:pointer;
+}
+
+.btn.home{background:var(--green);color:#fff;}
+.btn.wa{background:#25D366;color:#fff;text-decoration:none;}
+
+.weekGrid{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:10px;
+margin-top:12px;
+}
+
+.dayBtn{
+text-align:center;
+padding:12px;
+border-radius:14px;
+background:var(--soft);
+cursor:pointer;
+}
+
+.dayBtn.good{background:#dff2e7;}
+.dayBtn.mid{background:#fff3cd;}
+.dayBtn.bad{background:#f8d7da;}
+
+.phraseBox{
+background:var(--soft);
+padding:14px;
+border-radius:14px;
+margin-top:14px;
+}
+
+.phraseText{
+font-weight:900;
+margin-top:6px;
+}
+
+.miniNote{
+font-size:13px;
+color:var(--muted);
+}
+
+.gymList{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:10px;
+}
+
+.gymItem{
+background:#fff;
+padding:14px;
+border-radius:14px;
+font-weight:900;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.dayView{display:none;}
+
+.task{
+background:#fff;
+padding:14px;
+border-radius:14px;
+margin-bottom:12px;
+}
+
+.toggle{
+margin-top:10px;
+background:var(--soft);
+padding:10px;
+border-radius:12px;
+text-align:center;
+cursor:pointer;
+}
+
+.toggle.on{
+background:var(--green);
+color:#fff;
+}
+
+.closeDay{
+background:var(--green);
+color:#fff;
+text-align:center;
+padding:14px;
+border-radius:30px;
+font-weight:900;
+cursor:pointer;
+margin-top:10px;
+}
+
+/* Respeto saltos de línea en dieta */
+.task p{
+white-space:pre-line;
+line-height:1.6;
+margin:0;
+}
+
+/* Días del GYM */
+
+.gymDay{
+background:#fff;
+padding:14px;
+border-radius:14px;
+margin-bottom:10px;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.dow{
+font-size:12px;
+font-weight:900;
+color:var(--muted);
+}
+
+.emoji{
+font-size:22px;
+margin-top:6px;
+}
+
+/* BLOQUE MOTIVACIONAL */
+
+.commitTop{
+margin-top:14px;
+margin-bottom:18px;
+text-align:center;
+}
+
+.commitGlow{
+font-weight:900;
+color:var(--green);
+margin-bottom:8px;
+animation:pulseGlow 2.5s infinite;
+}
+
+.commitBtn{
+background:linear-gradient(135deg,#2f7d5a,#6fbf8a);
+border:none;
+padding:14px 22px;
+border-radius:40px;
+color:#fff;
+font-weight:900;
+font-size:15px;
+cursor:pointer;
+box-shadow:0 8px 18px rgba(0,0,0,0.12);
+transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.commitBtn:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 24px rgba(0,0,0,0.18);
+}
+
+@keyframes pulseGlow{
+0%{opacity:1;}
+50%{opacity:.6;}
+100%{opacity:1;}
+}
+
+.btn-reset{
+background:#c62828;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:8px;
+font-size:15px;
+cursor:pointer;
+margin-top:10px;
+transition:0.3s;
+}
+
+.btn-reset:hover{
+background:#b71c1c;
+transform:scale(1.05);
+}
+
+/* =========================
+   POPUP SANACIÓN
+========================= */
+
+.gymPopup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:999;
+
+justify-content:center;
+align-items:center;
+}
+
+.gymPopup.active{
+display:flex;
+}
+
+.gymPopup > *{
+background:white;
+padding:30px;
+border-radius:12px;
+max-width:400px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+/* =========================
+   PANEL PROGRESO CLIENTE
+========================= */
+
+.progresoPanel{
+background:#ffffff;
+border-radius:18px;
+padding:22px;
+margin-top:18px;
+box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+
+.progresoPanel h3{
+margin-bottom:14px;
+font-size:18px;
+font-weight:800;
+color:#2f7d5a;
+}
+
+/* INPUTS */
+
+.progresoInputs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
+margin-bottom:16px;
+}
+
+.progresoInputs input{
+padding:10px;
+border-radius:8px;
+border:1px solid #d8e0dc;
+font-size:14px;
+}
+
+.progresoInputs button{
+background:#2f7d5a;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:700;
+cursor:pointer;
+}
+
+.progresoInputs button:hover{
+background:#25694c;
+}
+
+/* RESUMEN */
+
+.progresoResumen{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
+margin-bottom:20px;
+}
+
+.resumenCard{
+background:#f5f7f6;
+border-radius:10px;
+padding:12px;
+text-align:center;
+}
+
+.resumenCard span{
+display:block;
+font-size:12px;
+color:#607166;
+}
+
+.resumenCard strong{
+font-size:22px;
+color:#2f7d5a;
+}
+
+/* TABLA */
+
+.progresoTabla{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+.progresoTabla th{
+text-align:left;
+font-size:13px;
+color:#607166;
+padding-bottom:6px;
+border-bottom:1px solid #e6ece8;
+}
+
+.progresoTabla td{
+padding:8px 0;
+border-bottom:1px solid #eef3f0;
+}
+
+/* BOTON RESET */
+
+.resetBtn{
+margin-top:12px;
+background:#e53935;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+font-size:13px;
+}
+
+.resetBtn:hover{
+background:#c62828;
+}

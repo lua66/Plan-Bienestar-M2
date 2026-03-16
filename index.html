@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Plan Bienestar V2</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2f7d5a">
+
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- TOP BAR -->
+  <div class="card topbar">
+    <div class="brand">
+      <h1>Hola Buenos días🌻</h1>
+      <p>Semana 1 del Mes 2. Elige cada día y ve paso a paso</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn wa"
+         href="https://wa.me/34608180231?text=Hola%20tengo%20una%20duda%20con%20el%20plan%20😊"
+         target="_blank">Hablar con Coach 💬</a>
+
+      <button class="btn home" id="btnHome">Inicio</button>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- HOME -->
+    <div class="card" id="homeCard">
+      <strong>Tu semana 1.2</strong>
+
+      <div class="commitTop">
+        <div class="commitGlow">
+        📮 Responde tu primer Formulario del Mes 2
+        </div>
+        <button class="commitBtn" id="openCommit">
+          🧚 ¿Lista para comenzar?
+        </button>
+      </div>
+
+      <div class="weekGrid" id="weekGrid"></div>
+
+      <div class="phraseBox">
+        <strong>🌟 Mensaje de hoy</strong>
+        <div class="phraseText" id="phraseText"></div>
+        <div class="miniNote" id="phraseHint"></div>
+      </div>
+
+      <!-- PEQUEÑO GYM -->
+      <div class="phraseBox">
+        <strong>🏋️ Tu pequeño gym</strong>
+        <div class="gymList">
+          <div class="gymItem" data-gym="yoga">YOGA <span>›</span></div>
+          <div class="gymItem" data-gym="pilates">PILATES <span>›</span></div>
+          <div class="gymItem" data-gym="tonificacion">TONIFICACIÓN <span>›</span></div>
+        </div>
+      </div>
+
+      <!-- SANACIÓN INTERIOR -->
+      <div class="phraseBox">
+        <strong>🕊️ Espacio Interior</strong>
+        <div class="gymList">
+          <div class="gymItem" data-gym="sanacion">
+            SANACIÓN DIARIA <span>›</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROGRESO DEL CLIENTE -->
+      <div class="phraseBox progresoPanel">
+
+        <h3>📊 Progreso del Cliente</h3>
+
+        <div class="progresoInputs">
+
+          <input id="semana" placeholder="Semana">
+          <input id="peso" placeholder="Peso" type="number">
+          <input id="cintura" placeholder="Cintura">
+          <input id="energia" placeholder="Energía (1-10)">
+
+          <button onclick="guardarProgreso()">Guardar progreso</button>
+
+        </div>
+
+        <div class="progresoResumen">
+
+          <div class="resumenCard">
+            <span>Peso actual</span>
+            <strong id="pesoActual">0</strong>
+          </div>
+
+          <div class="resumenCard">
+            <span>Peso perdido</span>
+            <strong id="pesoPerdido">0</strong>
+          </div>
+
+          <div class="resumenCard">
+            <span>Cintura actual</span>
+            <strong id="cinturaActual">0</strong>
+          </div>
+
+          <div class="resumenCard">
+            <span>Energía actual</span>
+            <strong id="energiaActual">0</strong>
+          </div>
+
+        </div>
+
+        <table class="progresoTabla">
+
+          <thead>
+            <tr>
+              <th>Semana</th>
+              <th>Peso</th>
+              <th>Cintura</th>
+              <th>Energía</th>
+            </tr>
+          </thead>
+
+          <tbody id="tablaDatos"></tbody>
+
+        </table>
+
+        <button class="resetBtn" onclick="resetProgreso()">
+          Reiniciar cliente
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- DÍA -->
+    <div class="card dayView" id="dayCard">
+      <h2 id="dayTitle"></h2>
+      <p id="dayMood"></p>
+
+      <div class="task">
+        <h3>🍽️ Dieta</h3>
+        <p id="dietText"></p>
+        <div class="toggle" id="dietToggle">✔️ Dieta hecha</div>
+      </div>
+
+      <div class="task">
+        <h3>🏃‍♀️ Ejercicio</h3>
+        <p id="workText"></p>
+        <div class="toggle" id="workToggle">✔️ Ejercicio hecho</div>
+      </div>
+
+      <div class="closeDay" id="closeDay">Volver</div>
+    </div>
+
+    <!-- GYM -->
+    <div class="card dayView" id="gymCard">
+      <h2 id="gymTitle"></h2>
+      <p id="gymSubtitle"></p>
+
+      <div id="gymDays"></div>
+
+      <div class="closeDay" id="closeGym">Volver</div>
+    </div>
+
+    <!-- COMPROMISO -->
+    <div class="card dayView" id="commitCard">
+      <h2>💚 Antes de empezar</h2>
+
+      <p>Mañana comienza tu mejor decisión.</p>
+      <p>No buscamos perfección. Buscamos constancia.</p>
+
+      <div class="closeDay" id="goToForm">Ir al formulario</div>
+      <div class="closeDay" id="closeCommit">Volver</div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
