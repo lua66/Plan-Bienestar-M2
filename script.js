@@ -35,7 +35,7 @@ diet:`DESAYUNO (9:30 aprox)
 COMIDA
 • Verduras salteadas
 • Pescado al horno
-• Patata pequeña
+• calabaza con aliño de ajo y cebolla pequeña
 • Fruta
 
 CENA
@@ -88,7 +88,7 @@ diet:`DESAYUNO
 • 1 huevo cocido
 
 COMIDA
-• Verduras al horno
+• Verduras al horno (Calabaza y Berenjenas)
 • Carne magra
 • Boniato pequeño
 • Infusión
