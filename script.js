@@ -5,125 +5,119 @@ const FORM_URL="https://docs.google.com/forms/d/e/1FAIpQLSdUCu_jSgP70VvRwlDIwUwc
 const DAYS=["L","M","X","J","V","S","D"];
 const FULL=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
 
-const WEEK = [
-  {
-    diet:`DESAYUNO (9:30 aprox)
+  const WEEK = [
+{
+diet:`DESAYUNO (9:30 aprox)
 • Café o infusión
-• Yogur natural con nueces
-• 1 fruta (kiwi o manzana)
-• 2 huevos cocidos
+• Yogur natural + nueces
+• 1 fruta (manzana o kiwi)
+• 1 huevo cocido
 
 COMIDA
-• Ensalada grande (lechuga, tomate, cebolla, zanahoria)
-• Pechuga de pollo
-• Frutos secos
+• Alcachofas al vapor (2-3)
+• Pechuga de pollo a la plancha
+• Pequeña ración de boniato
 • Infusión
 
 CENA (antes de las 21:00)
-• Sopa de Marisco`,
-    work:`• Al levantarte: estiramientos 20 min
-• 2 minutos de respiración profunda`
-  },
+• Crema de verduras
+• Pavo`,
+work:`• Estiramientos 20 min
+• 3 min respiración consciente`
+},
 
-  {
-    diet:`DESAYUNO (9:30 aprox)
+{
+diet:`DESAYUNO (9:30 aprox)
 • Café o infusión
-• Avena con bebida vegetal + 1 plátano pequeño
-• Tortilla a la francesa
+• Avena con bebida vegetal + semillas
+• Tortilla francesa
 
 COMIDA
 • Verduras salteadas
 • Pescado al horno
-• Pequeña ración patata 1
+• Patata pequeña
 • Fruta
-• Infusión
 
-CENA (antes de las 21:00)
-• Crema de verdura + pavo
+CENA
+• Ensalada ligera con atún
 • Yogur`,
-    work:`• Al levantarte: estiramientos 20 min
-• 3 minutos de respiración profunda en posición yoga`
-  },
+work:`• Estiramientos 20 min
+• Caminata 20-30 min`
+},
 
-  {
-    diet:`DESAYUNO (9:30 aprox)
-• Café o infusión
-• Yogur natural o kéfir con una cucharada de chia
-• 1 Huevo cocido
-• 1 Naranja
+{
+diet:`DESAYUNO
+• Yogur o kéfir + chía
+• 1 naranja
+• 1 huevo cocido
 
 COMIDA
-• brócoli al vapor y quinoa
-• salmón al horno con hierbas
-• alcachofas 2
+• Brócoli +  Alcachofas (2)
+• Salmón al horno
 • Infusión
 
-CENA (antes de las 21:00)
-• Ensalada pequeña con tomate,aguacate,rucula,espinaca,nueces,manzana
-• Yogurt
-• Sin pan, sin dulce`,
-    work:`• Al levantarte: estiramientos 20 min
-• Sentadillas espalda en la pared (20 seg x 2)
-• 3 minutos de respiración en posición yoga`
-  },
+CENA
+• Ensalada verde + aguacate + nueces
+• Yogur`,
+work:`• Estiramientos
+• Sentadillas pared (20 seg x2)
+• Respiración 3 min`
+},
 
-  {
-    diet:`DESAYUNO (9:30 aprox)
+{
+diet:`DESAYUNO
 • Café o infusión
-• Tostada integral con queso crema y pavo
-• frutos secos 1 puñado pequeño.
+• Tostada integral con pavo
+• Frutos secos
 
 COMIDA
-• lentejas con verduras y arroz
+• Pasta (lazaña o rollitos con carne) comer con moderación
 • Fruta
-• Infusión
 
-CENA (antes de las 21:00)
-• Crema de verduras con jamón dulce`,
-    work:`• Al levantarte: estiramientos 20 min
-• Sentadillas espalda en la pared (30 seg x 2)
-• 3 minutos de respiración en posición yoga`
-  },
+CENA
+• Crema de verduras
+• Jamón cocido`,
+work:`• Estiramientos
+• Sentadillas (30 seg x2)`
+},
 
-  {
-    diet:`DESAYUNO (9:30 aprox)
-• Café o infusión
-• Bebida vegetariana de avena con linaza.
+{
+diet:`DESAYUNO
+• Bebida vegetal + linaza
 • 1 fruta
-• 1 Huevo cocido
+• 1 huevo cocido
 
 COMIDA
-• Berenjena, Zanahoria y calabacín al horno
-• carne magra de vacuno
-• Naranja o mandarina
+• Verduras al horno
+• Carne magra
+• Boniato pequeño
 • Infusión
 
-CENA (antes de las 21:00)
-• Crema de verduras o caldo
-• Yogurt`,
-    work:`• Al levantarte: estiramientos 20 min
-• Sentadillas espalda en la pared (40 seg x 2)
-• 3 minutos de respiración en posición yoga`
-  },
+CENA
+• Caldo o crema ligera
+• Yogur`,
+work:`• Estiramientos
+• Sentadillas (40 seg x2)`
+},
 
-  {
-    diet:`Hoy decides tú
-? Desayuna normal
-? Come algo que te guste y dobla la proteína
-? Si quieres un postre, disfrútalo sin culpas
-? Cena ligero`,
-    work:`• Muévete como te apetezca
-• Pasear, ordenar la casa o descansar`
-  },
-
-  {
-    diet:`Alimentación tranquila
-• Come despacio
-• Prioriza comida casera y baja en sal
+{
+diet:`DÍA FLEXIBLE CONTROLADO
+• Desayuno normal
+• Comida libre moderada (sin excesos)
+• Prioriza proteína
 • Cena ligera`,
-    work:`Reto del domingo
-• Caminar 45 minutos`
-  }
+work:`• Paseo relajado
+• Movimiento suave`
+},
+
+{
+diet:`DÍA DEPURATIVO
+• Comida suave
+• Verduras + proteína ligera
+• Sin ultraprocesados
+• Cena muy ligera`,
+work:`• Caminar 40-45 min`
+}
 ];
 
 const STATUS={
