@@ -7,116 +7,124 @@ const FULL=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"
 
   const WEEK = [
 {
-diet:`DESAYUNO (9:30 aprox)
-• Café o infusión
-• Yogur natural + nueces
-• 1 fruta (manzana o kiwi)
+diet:`DESAYUNO Lunes (9:30 aprox)
+• Agua tibia con limón (en ayunas)
 • 1 huevo cocido
+• Yogur natural con semillas de chía
+• 1 fruta (manzana)
 
 COMIDA
-• Alcachofas al vapor (2-3)
-• Pechuga de pollo a la plancha
-• Pequeña ración de boniato
-• Infusión
+• Alcachofas al vapor (3)
+• Calabacín + zanahoria salteados
+• Pechuga de pollo
+• Infusión digestiva
 
 CENA (antes de las 21:00)
-• Crema de verduras
+• Crema de verduras (calabacín, puerro)
 • Pavo`,
 work:`• Estiramientos 20 min
-• 3 min respiración consciente`
+• Respiración profunda 3 min`
 },
 
 {
-diet:`DESAYUNO (9:30 aprox)
-• Café o infusión
-• Avena con bebida vegetal + semillas
-• Tortilla francesa
+diet:`DESAYUNO Martes
+• Infusión
+• Avena con bebida vegetal + linaza + tortilla
+• 1 fruta
 
 COMIDA
-• Verduras salteadas
-• Pescado al horno
-• calabaza con aliño de ajo y cebolla pequeña
-• Fruta
+• Arroz de quinoa
+• Pescado blanco (merluza o lenguado)
+• Infusión digestiva
 
 CENA
-• Ensalada ligera con atún
+• Ensalada verde + pepino + aguacate
 • Yogur`,
-work:`• Estiramientos 20 min
-• Caminata 20-30 min`
+work:`• Caminata suave 25 min
+• Estiramientos`
 },
 
 {
-diet:`DESAYUNO
+diet:`DESAYUNO Miércoles
+• Agua con limón
 • Yogur o kéfir + chía
-• 1 naranja
-• 1 huevo cocido
+• 2 Huevos revueltos con pimiento y cebolla
 
 COMIDA
-• Brócoli +  Alcachofas (2)
+• Brócoli + alcachofas
 • Salmón al horno
 • Infusión
-
-CENA
-• Ensalada verde + aguacate + nueces
-• Yogur`,
-work:`• Estiramientos
-• Sentadillas pared (20 seg x2)
-• Respiración 3 min`
-},
-
-{
-diet:`DESAYUNO
-• Café o infusión
-• Tostada integral con pavo
-• Frutos secos
-
-COMIDA
-• Pasta (lazaña o rollitos con carne) comer con moderación
-• Fruta
+• Fruta Kiwi
 
 CENA
 • Crema de verduras
-• Jamón cocido`,
+• Tortilla francesa`,
 work:`• Estiramientos
-• Sentadillas (30 seg x2)`
+• Respiración 5 min`
 },
 
 {
-diet:`DESAYUNO
-• Bebida vegetal + linaza
+diet:`DESAYUNO Jueves
+• Infusión
+• Tostada integral con aguacate + huevo cocido
 • 1 fruta
-• 1 huevo cocido
 
 COMIDA
-• Verduras al horno (Calabaza y Berenjenas)
-• Carne magra
-• Boniato pequeño
+• Lentejas suaves con verduras
+• Ensalada pequeña
 • Infusión
 
 CENA
-• Caldo o crema ligera
-• Yogur`,
-work:`• Estiramientos
-• Sentadillas (40 seg x2)`
+• Caldo vegetal
+• Pavo`,
+work:`• Caminata 30 min`
 },
 
 {
-diet:`DÍA FLEXIBLE CONTROLADO
-• Desayuno normal
-• Comida libre moderada (sin excesos)
-• Prioriza proteína
-• Cena ligera`,
-work:`• Paseo relajado
-• Movimiento suave`
+diet:`DESAYUNO Viernes 
+• Agua tibia con limón
+• Yogur + semillas + unas lazcas de queso fresco y jamon dulce
+• 1 fruta
+
+COMIDA
+• Verduras al horno (berenjena, calabaza)
+• Carne magra
+• Infusión
+
+CENA
+• Crema ligera
+• Yogur`,
+work:`• Estiramientos
+• Sentadillas suaves`
+},
+
+{
+diet:`DÍA MUY LIGERO
+• Infusiones durante el día
+• Verduras + proteína ligera
+• Evitar harinas y azúcar
+
+COMIDA
+• Sopa vegetal
+• Pescado o pollo
+
+CENA
+• Crema o caldo`,
+work:`• Paseo relajado`
 },
 
 {
 diet:`DÍA DEPURATIVO
-• Comida suave
-• Verduras + proteína ligera
-• Sin ultraprocesados
-• Cena muy ligera`,
-work:`• Caminar 40-45 min`
+• Mucha agua + infusiones
+• Comida muy ligera
+• Verduras + proteína suave
+• Cena muy ligera
+
+Evitar:
+• Azúcar
+• Fritos
+• Alcohol`,
+work:`• Caminar 40 min`
 }
 ];
 
@@ -127,9 +135,9 @@ const STATUS={
 };
 
 const PHRASES={
-  good:["Hoy sumaste salud 💚","Constancia tranquila 💚"],
-  mid:["No hace falta perfecto 💚"],
-  bad:["Descansar también es avanzar 💚"]
+  good:["Hoy sumaste salud 🏋️‍♂️","Constancia tranquila 💚"],
+  mid:["No hace falta perfecto 🙌"],
+  bad:["Descansar también es avanzar 🌻"]
 };
 
 let progress=Array.from({length:7},()=>({diet:false,work:false}));
